@@ -1,0 +1,431 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+  color: #fefefe;
+}
+
+body {
+  background-color: #141412;
+  overflow-x: hidden;
+}
+
+/* navbar/mobile */
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  * {
+    overflow-x: hidden;
+  }
+
+  .nav {
+    height: 4.5%;
+    position: fixed !important;
+    top: 0;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    padding: 2%;
+    visibility: visible !important;
+  }
+
+  .mobile-search {
+    width: 20px;
+    position: absolute;
+    right: 0.5%;
+    padding: 2%;
+    display: inline !important;
+  }
+
+  img.logo {
+    position: absolute;
+    left: 41%;
+    top: 5%;
+    width: 20%;
+  }
+
+  .search [type="text"] {
+    display: none;
+  }
+
+  img.search {
+    position: absolute;
+    right: 0;
+    width: 30%;
+  }
+
+  .dropbtn {
+    display: none;
+  }
+
+  div.banner-overlay {
+    width: 100%;
+  }
+
+  .banner-overlay p {
+    font-size: 8px;
+    text-align: center;
+    padding-right: 5%;
+  }
+
+  img.dropbtn {
+    width: 50px;
+  }
+
+  .newly-released {
+    font-size: 22px;
+    margin: 4%;
+    padding-right: 5%;
+    margin-bottom: 10%;
+    text-align: center;
+  }
+
+  .coming-soon {
+    font-size: 22px;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    text-align: center;
+  }
+
+  div.movie-container {
+    background-color: #292927;
+    margin-bottom: 5%;
+    padding: 5%;
+    padding-left: 6%;
+    width: 100%;
+  }
+
+  .movie-contents {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    margin-right: 5% !important;
+    position: relative;
+  }
+
+  p.movie-title {
+    font-size: 15px;
+    padding-top: 5%;
+  }
+
+  p.rating {
+    font-size: 12px;
+  }
+  button.trailer-button {
+    font-size: 13px;
+    left: 125px;
+    margin-top: 5px;
+  }
+
+  .fave-heading {
+    padding-top: 18% !important;
+    padding-bottom: 7% !important;
+    text-align: center;
+  }
+
+  .movie-categories {
+    padding-top: 18% !important;
+    padding-bottom: 7% !important;
+    text-align: center;
+  }
+
+  .footer {
+    padding-bottom: 3% !important;
+  }
+
+  .footer-logo {
+    width: 18% !important;
+  }
+}
+
+/* navbar */
+
+.nav {
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #6b6968;
+  margin: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.mobile-menu {
+  position: absolute;
+  visibility: hidden;
+}
+
+.logo {
+  width: 32%;
+  cursor: pointer;
+}
+
+.mobile-search {
+  display: none;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 15%;
+}
+
+.search [type="text"] {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #6b6968;
+  border-radius: 8px;
+  height: 50%;
+  margin-top: 7.5%;
+  padding-left: 5px;
+  width: 110%;
+  outline: none;
+}
+
+.search button {
+  border: none;
+}
+
+.loupe-search {
+  color: #6b6968;
+  cursor: pointer;
+  position: absolute;
+  top: 32%;
+  right: 6%;
+  width: 20px;
+}
+
+.services {
+  position: relative;
+}
+
+#cat-dropdown {
+  position: absolute;
+  right: 20%;
+}
+
+.favorites {
+  float: right;
+}
+
+.category-dropdown {
+  float: left;
+}
+
+/* Caterories Dropdown */
+
+.dropbtn {
+  color: white;
+  margin-top: 13px;
+  padding: 5px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+}
+
+/* the container <div> - needed to position the dropdown content */
+.category-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  color: #fefefe;
+  font-size: 13px;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+  background-color: #333;
+}
+
+/* show class for JS */
+.show {
+  display: block;
+}
+
+/* banner */
+
+.banner-section {
+  position: relative;
+  margin: 0 auto;
+}
+
+.banner {
+  width: 100%;
+}
+
+.banner-section .banner-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  width: 100%;
+  padding: 3%;
+}
+
+.newly-released {
+  padding-top: 5%;
+  padding-left: 5%;
+}
+
+.newly-released h1 {
+  color: #e0e0e0;
+}
+
+.movie-container {
+  position: relative;
+  padding-bottom: 19%;
+}
+
+.divider {
+  border-bottom: 2px solid #6b6968;
+  margin: 0 25%;
+}
+
+.coming-soon {
+  padding-top: 5%;
+  padding-left: 5%;
+}
+
+.coming-soon h1 {
+  color: #e0e0e0;
+}
+
+.footer {
+  border-top: 2px solid #6b6968;
+  margin: 0 5%;
+  padding-top: 0.5%;
+  padding-bottom: 2%;
+  color: #e0e0e0;
+}
+
+.footer-logo {
+  width: 10%;
+}
+
+.footer p {
+  color: #e0e0e0;
+  font-size: 12px;
+}
+
+/* favorites button */
+
+.fave-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 32%;
+  top: 2%;
+  outline: inherit;
+}
+
+.favorites-heart {
+  position: absolute;
+  top: 12.5px;
+  left: 10px;
+}
+
+.favorites-bg {
+  position: absolute;
+}
+
+/********************/
+
+.fave-heading {
+  padding-top: 8%;
+  padding-left: 5%;
+}
+
+.movie-contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 3%;
+  margin-left: 5.5%;
+}
+
+.movie-data {
+  display: flex;
+}
+
+.poster {
+  width: 88%;
+  height: 345px;
+}
+
+.movie-title {
+  padding-top: 5%;
+  font-size: 14px;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+}
+
+.rating {
+  font-size: 11px;
+  padding-top: 10px;
+}
+
+.trailer-button {
+  position: relative;
+  background-color: #2b2b2b;
+  border: 4px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 3px 18px;
+  position: relative;
+  outline: none;
+  left: 75px;
+  bottom: 5px;
+}
+
+.movie-categories {
+  padding-top: 8%;
+  padding-left: 5%;
+}
+
+/* Javier Zapata */
+
+.javier {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientBG 2.5s linear infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
